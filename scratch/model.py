@@ -91,17 +91,17 @@ class Transformer(nn.Module):
         return logits
 
 
-config = {
-    "vocab_size": 50257,
-    "context_length": 1024,
-    "emb_dim": 512,
-    "n_heads": 8,
-    "n_layers": 6,
-    "drop_rate": 0.1,
-    "qkv_bias": False,
-}
 
 if __name__ == "__main__":
+    config = {
+        "vocab_size": 50257,
+        "context_length": 1024,
+        "emb_dim": 512,
+        "n_heads": 8,
+        "n_layers": 6,
+        "drop_rate": 0.1,
+        "qkv_bias": False,
+    }
     model = Transformer(config)
     x = torch.randint(0, 50257, (1, 1024))
     out = model(x)
