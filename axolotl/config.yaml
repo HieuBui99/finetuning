@@ -13,7 +13,8 @@ seed: 49
 
 chat_template: chatml
 datasets:
-  - path: ../data/instruct_data.jsonl
+  # - path: ../data/instruct_data.jsonl
+  - path: instruct_data.jsonl
     type: alpaca
     # field_messages: conversations
     # message_field_role: role
@@ -24,7 +25,7 @@ datasets:
 dataset_prepared_path: last_run_prepared
 val_set_size: 0.1
 output_dir: ./qlora-alpaca-out
-# hub_model_id: hamel/hc-mistral-alpaca
+hub_model_id: hieu1344/hc-mistral-alpaca
 
 adapter: qlora
 lora_model_dir:
@@ -47,8 +48,8 @@ lora_target_modules:
   - k_proj
   - o_proj
 
-wandb_project: test-mistral
-wandb_entity: hieubui99
+# wandb_project: test-mistral
+# wandb_entity: hieubui99
 
 gradient_accumulation_steps: 4
 micro_batch_size: 4

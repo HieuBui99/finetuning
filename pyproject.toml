@@ -5,9 +5,12 @@ description = "Description"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "bitsandbytes>=0.45.0",
     "ipykernel>=6.29.5",
     "lightning>=2.5.0.post0",
     "tiktoken>=0.8.0",
+    "unsloth>=2025.1.6",
+    "vllm>=0.5.5",
     "wandb>=0.19.4",
 ]
 
